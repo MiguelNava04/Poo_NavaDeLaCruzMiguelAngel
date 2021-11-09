@@ -43,9 +43,10 @@ class EstructuradeDatos{
 
 
         //variables
-        int edad, opcion, socio;
+        int edad, opcion, socio, numbinario;
         double precio, bono;
         char letras;
+        String binario = "";
 
        
         //cuerpo del programa
@@ -122,6 +123,36 @@ class EstructuradeDatos{
                 break;
 
                 case 2:
+
+                     System.out.println("Ingrese un numero positivo entero que desee convertir a binario");
+                     numbinario = entrada.nextInt();
+                     /*
+                     tengo que comprobrar que sea positivo?
+                     condicion donde binario > 0
+                     entonces aplico el algoritmo de convertir a binario
+                     sino se puede convertir
+                     */
+
+                     if(numbinario >  0){
+                         /*
+                         Como el algoritmo para convertir un numerp decimal en binario
+                         aplicar al numbinario mod 2
+                         */
+                        while(numbinario > 0){
+                            if(numbinario % 2 == 0){
+                                binario = "0" + binario;
+                            }else{
+                                binario = "1" + binario;
+                            }
+                            numbinario = (int)numbinario / 2;
+                        }
+                     }else if (numbinario == 0){
+                         binario = "0";
+                     }else{
+                         binario = "No se pudo convertir el numero, ingrese solo positivos.";
+                     }
+                     System.out.println("El numero convertido a binario es: " + binario);
+                     break;
 
 
                 case 3:
