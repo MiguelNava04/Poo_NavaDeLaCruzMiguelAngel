@@ -320,10 +320,55 @@ class EstructuradeDatos{
                     break;
 
                 case 11:
+                //tarea
 
                 case 12:
+                //tarea
 
                 case 13:
+
+                System.out.println("Calculadora maizcoro");
+                System.out.println("Ingresa nun numero");
+                a = entrada.nextInt();
+                System.out.println("Ingresa un segundo numero");
+                b = entrada.nextInt();
+                System.out.println ("Ingresa el tipo de operacion que deseas realizar : (+ , -, *, /)");
+                operacion = entrada.next().charAt(0);
+
+                /*
+                switch
+                    case +
+                    case -
+                    case *
+                    case /
+                */
+
+                switch(operacion){
+                    case '+' :
+                        resultado = a+b;
+                        System.out.println("La suma es de: " + resultado);
+                        break;
+                    case '-' :
+                        resultado = a-b;
+                        System.out.println("La resta es de: " + resultado);
+                        break;
+                    case '*' :
+                        resultado = a*b;
+                        System.out.println("La multiplicacion es de: " + resultado);
+                        break;
+                    case '/' :
+                        if(b != 0){
+                            resultado = a/b;
+                            System.out.println("La division es de: " + resultado);
+
+                        }else{
+                            System.out.println("No es posible divir entre 0");
+                        }
+                        break;
+                    default :
+                        System.out.println("Operacion no valida");
+
+                    }
 
                 default:
                     System.out.println("Gracias por ver este hermoso programa :3");
