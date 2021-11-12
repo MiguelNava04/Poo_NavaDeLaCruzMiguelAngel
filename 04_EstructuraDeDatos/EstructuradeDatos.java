@@ -43,9 +43,14 @@ class EstructuradeDatos{
 
 
         //variables
-        int edad, opcion, socio, numbinario;
+        int edad, opcion, socio, numbinario, total, numerototal, n, a, b;
+        int positivos = 0;
+        int negativos = 0;
         double precio, bono;
-        char letras;
+        char letras, operacion;
+        float precios = 0;
+        float resultado = 0;
+        int cantidad = 0;
         String binario = "";
 
        
@@ -159,18 +164,160 @@ class EstructuradeDatos{
 
                 case 4:
 
+
+                /*
+                Un numero positivo y un num negativo
+                entonces para poder identificar si es un numero positivo o negativo
+                debo de poder diferenciar si es 
+                num > 0 
+                */
+
+                System.out.println("¿Cuantos numero va a ingresar?");
+                total = entrada.nextInt();
+
+                do{
+                    System.out.println("Inserte el numero");
+                    numerototal = entrada.nextInt();
+
+                    //condicion
+                    if(numerototal == 0){
+                        //contar cuantos positivos hubo
+                        //vamos a ir acumulando el numero positivo
+                        positivos = positivos + 0;
+
+                    }else{
+                        if(numerototal > 0){
+                            positivos = positivos +1;
+                        }else{
+                            negativos = negativos +1;
+                        }
+                    }
+
+                    //saber el total 
+                    total = total-1;
+
+
+                }while(total != 0);
+
+
+                System.out.println("El total de positivos es:"+ positivos);
+                System.out.println("El total de negativos es:"+ negativos);
+
+                break; 
+
                 case 5:
+                 System.out.println("¿Cuantos elementos vas a ingresar con su cantidad ");
+                 total = entrada.nextInt();
+
+                 for(int i = 1; i <= total; i++){
+                     System.out.println("Ingresa el Precio producto");
+                     precios = entrada.nextFloat();
+                     System.out.println("Ingresa la Cantidad del Producto");
+                     cantidad = entrada.nextInt();
+
+                     resultado = precios * cantidad;
+                 }
+                 
+                System.out.println("El resultado es :" + resultado);
+
+                break;
 
                 case 6:
+                    //tarea
 
                 case 7:
+                    for(n = 1; n<= 10; n++){
+                        System.out.println(n + " " + (n*10)+ " " + (n*100) + " " + (n*1000));
+                    }
+                    break;
 
                 case 8:
+                    //tarea de ustedes 
+                    /*
+                    introduce el digito
+                    for (num ; iterador >0; i--)
+                    factorial = factorial * iterador
+                     
+                    
+                    while(num == 1){
+                        factorial = factorial -1
+                    }
+                    
+                    
 
-                case 9:
+                    */
+
+                 case 9:
+                    /*
+                    ESCRIBA UN PROGRAMA QUE LEA EL LADO DE UN CUADRADO Y A CONTINUACIÓN LO IMPRIMA
+                    EN FORMA DE ASTERISCOS SU PROGRAMA DEBERa PODER FUNCIONAR PARA CUADRADOS
+                    DE TODOS TAMAÑOS ENTRE 1 Y 20.
+                    */
+
+                    System.out.println("Cuadro Magico");
+                    System.out.println("Inserte el num de lados: ");
+                    n = entrada.nextInt();
+
+                    if( n>= 1 && n <=20){
+                        //se puede impimir
+                        // aqui tengo las filas
+                        for(int i = 1; i<=n; i++){
+                            //columnas
+                            for(int j = 1; j<=n; j++){
+                                System.out.print("* ");
+
+                            }
+                        System.out.println(" ");
+
+
+                        }
+                    }else{
+                        System.out.println("Error,el rango debe de ser entre 1 y 20, intente de nuevo");
+                    }
+
 
 
                 case 10:
+
+                    System.out.println("Cuadro Magico Hueco (Como tu ex dejo asi tu kokoro wiii)");
+                    System.out.println("Inserte el num de lados: ");
+                    n = entrada.nextInt();
+
+                    if( n>= 1 && n <=20){
+                       //no se puede impimir
+
+                       // imprima la linea superior 
+                       for(int i = 0; i < n; i++){
+                           System.out.print(" * ");
+                        }
+                        System.out.println();
+
+                        //lo de enmedio solo quiero las esquinas
+                        //cuadro interno
+                        //aqui tengo las filas
+                        for(int i = 0; i < n-2; i++){
+                            System.out.print(" * ");
+                            //columnas
+                            for(int j = 0; j < n-2; j++){
+                                System.out.print("  ");
+
+                            }
+                        System.out.println("   * ");
+
+
+
+                        }
+
+                        //imprimir la lina inferior
+                        for(int i = 0; i < n; i++){
+                            System.out.print(" * ");
+                        }
+                        System.out.println();
+                    }else{
+                        System.out.println("Error, el rango debe de ser entre 1 y 20, intente de nuevo");
+                    }
+
+                    break;
 
                 case 11:
 
