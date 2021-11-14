@@ -21,6 +21,7 @@ vamos a crear un programa que se encarge de realizar las siguientes operaciones
 
 import java.util.Scanner;
 
+
 class EstructuradeDatos{
 
     //Programa 1
@@ -46,6 +47,7 @@ class EstructuradeDatos{
         int edad, opcion, socio, numbinario, total, numerototal, n, a, b;
         int positivos = 0;
         int negativos = 0;
+        int num, suma = 0;
         double precio, bono;
         char letras, operacion;
         float precios = 0;
@@ -246,6 +248,27 @@ class EstructuradeDatos{
                     
 
                     */
+                    System.out.println("Introduce el digito de sumatoria que no sea menor a 0");
+                    num = entrada.nextInt();
+
+                    if(num > 0)
+
+                    {
+                        for(int i=1; i< num; i++){
+                            suma=suma + i;
+                        }
+                        System.out.println("El resultado de la sumatoria es: "+ suma);
+                    }
+
+                    else 
+                    {
+                        System.out.println("El valor es menor a 0");
+                    }
+                {
+        
+        } 
+                break;
+
 
                  case 9:
                     /*
@@ -308,7 +331,7 @@ class EstructuradeDatos{
 
                         }
 
-                        //imprimir la lina inferior
+                        //imprimir la linea inferior
                         for(int i = 0; i < n; i++){
                             System.out.print(" * ");
                         }
@@ -377,16 +400,16 @@ class EstructuradeDatos{
 
         }
 
-        System.out.println("¿Deseas repetir el programa? Si lo desea escriba s");
-        /*
-           para recibir la respuesta debo de obtener un caracter s
-           para cuando se reciben char se utiliza ''
-           para cuando se reciben String se utiliza ""
-        */
+            System.out.println("¿Deseas repetir el programa? Si lo desea escriba s");
+            /*
+                para recibir la respuesta debo de obtener un caracter s
+                para cuando se reciben char se utiliza ''
+                para cuando se reciben String se utiliza ""
+            */
 
-        letras = entrada.next().charAt(0);
+            letras = entrada.next().charAt(0);
 
-        //si el usuario ingresa si solo detecta la s es la posicion del caracter que queremos leer
+            //si el usuario ingresa si solo detecta la s es la posicion del caracter que queremos leer
 
 
 
