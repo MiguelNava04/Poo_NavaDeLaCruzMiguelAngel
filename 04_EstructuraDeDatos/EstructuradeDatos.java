@@ -44,14 +44,15 @@ class EstructuradeDatos{
 
 
         //variables
-        int edad, opcion, socio, numbinario, total, numerototal, n, a, b;
+        int edad, opcion, socio, numbinario, total, numerototal, Num, grados, grados2, operacion, fig, calculo, n, a, b;
         int positivos = 0;
         int negativos = 0;
         int num, suma = 0;
-        double precio, bono;
-        char letras, operacion;
+        double precio, bono, celsius, kelvine, rankine, a1, resul, c, d, e;
+        char letras;
         float precios = 0;
         float resultado = 0;
+        double pi = 3.1416;
         int cantidad = 0;
         String binario = "";
 
@@ -163,11 +164,78 @@ class EstructuradeDatos{
 
 
                 case 3:
+                    
+                    System.out.println("Inserte 1 si los grados son celsius, 2 si es kelvine o 3 son rankine");
+                    grados = entrada.nextInt();
+                    if (grados == 1){
+
+                    System.out.println("Inserte los grados celsius");
+                    celsius = entrada.nextDouble();
+
+                    System.out.println("Inserte 1 si quiere convertir a a kelvine o 2 si quiere convertir a rankine");
+                    grados2 = entrada.nextInt();
+                    if(grados2 == 1){
+                        kelvine = celsius * 273.15;
+
+                    System.out.println("Los grados celsius convertidos son:"+ kelvine);
+                    }else{
+                        if(grados2 == 2){
+                            rankine = (celsius * 1.8) + 491.67;
+                    System.out.println("Los grados celsius convertidos son:" + rankine);
+                    }else{
+
+                    System.out.println("Su respuesta no es valida");
+
+                    }
+                } 
+                    }else{
+                        if(grados == 2){
+                    System.out.println("Inserte los grados kelvine");
+                    kelvine = entrada.nextDouble();
+                    
+                    System.out.println("Inserte 1 si quiere convertir a celsius o 2 si quiere convertir a rankine");
+                    grados2 = entrada.nextInt();
+                    if(grados2 == 1){
+                        celsius = kelvine - 273.15;
+
+                    System.out.println("Los grados kelvine convertidos son:" + celsius);
+                    }else{
+                        rankine = kelvine * 18; 
+                        
+                    System.out.println("Los gradis kelvine convertidos son:" + rankine);
+                    }
+                }else{
+                    if(grados == 3){
+                    
+                    System.out.println("Inserte los grados rankine");
+                    rankine = entrada.nextDouble();
+
+                    System.out.println("Inserte 1 si quiere convertir a celsius o 2 si quiere convertir a kelvine");
+                    grados2 = entrada.nextInt();
+                    if(grados2 == 1){
+                        celsius =(rankine - 491.67) * 1.8;
+
+                    System.out.println("Los grados rankine convertidos son:" + celsius);
+                }else{
+                    kelvine = rankine / 1.8;
+
+                    System.out.println("Los grados rankine convertidos son:" + kelvine);
+                    }
+
+                }else{
+                    
+                    System.out.println("Su respuesta no fue comprendida intente de nuevo");
+                    }
+                    
+                }
+
+                
+                    
+            }
+            break;
 
                 case 4:
-
-
-                /*
+                 /*
                 Un numero positivo y un num negativo
                 entonces para poder identificar si es un numero positivo o negativo
                 debo de poder diferenciar si es 
@@ -208,7 +276,8 @@ class EstructuradeDatos{
                 break; 
 
                 case 5:
-                 System.out.println("¿Cuantos elementos vas a ingresar con su cantidad ");
+
+                 System.out.println("¿Cuantos elementos vas a ingresar con su cantidad?");
                  total = entrada.nextInt();
 
                  for(int i = 1; i <= total; i++){
@@ -226,6 +295,126 @@ class EstructuradeDatos{
 
                 case 6:
                     //tarea
+
+                System.out.println("Ingrese 1 si tiene un cuadrado, 2 si tiene un triangulo, 3 si tiene un rectangulo, 4 si tiene un circulo");
+                fig = entrada.nextInt();
+
+                switch(fig){
+
+                case 1:
+                System.out.println("Inserte cuanto mide un lado del cuadrado");
+                c = entrada.nextFloat();
+
+                System.out.println("Inserte 1 para calcular el perimetro, 2 para calcular el area");
+                calculo = entrada.nextInt();
+                
+                switch(calculo){
+
+                case 1:
+                    resul = c * 4;
+
+                System.out.println("El perimetro del cuadrado es:" + resul);
+
+                break;
+
+                case 2:
+                    resul = c * c;
+
+                System.out.println("El area del cuadrado es:" + resul);
+                break;
+            default:
+
+                System.out.println("La respuesta no es correcta, intente de nuevo");
+                }
+                break;
+
+                case 2:
+                System.out.println("Inserte 1 para calcular perimetro , 2 para calcular el area ");
+                calculo = entrada.nextInt();
+                switch(calculo){
+
+                case 1: 
+                System.out.println("Inserte cuanto mide el lado A del triangulo");
+                c = entrada.nextFloat();
+
+                System.out.println("Inserte cuanto mide el lado B del triangulo");
+                d = entrada.nextFloat();
+
+                System.out.println("Inserte cuanto mide el lado C del triangulo");
+                e = entrada.nextFloat();
+                resul = c + d + e;
+
+                System.out.println("El perimetro del triangulo es de:" + resul);
+                break;
+
+                case 2:
+                System.out.println("Inserte cuanto mide la base del triangulo");
+                c = entrada.nextFloat();
+
+                System.out.println("Inserte cuanto mide la alura del triangulo");
+                d = entrada.nextFloat();
+                resul = (c*d) / 2;
+
+                System.out.println("El area del triangulo es:" + resul);
+                break;
+            default:
+              
+                System.out.println("La respuesta no es correcta intente de nuevo");
+
+            }
+                break;
+
+                case 3:
+                System.out.println("Inserte cuanto mide el lado A del rectangulo");
+                c = entrada.nextFloat();
+                
+                System.out.println("Inserte cuanto mide el lado B del rectangulo");
+                d = entrada.nextFloat();
+
+                System.out.println("Inserte 1 para calcular el perimetro , 2 para calcular area");
+                calculo = entrada.nextInt();
+                switch(calculo){
+
+                case 1:
+                resul =(2*c + 2*d);
+
+                System.out.println("El perimetro del rectangulo es:" + resul);
+                break;
+
+                case 2:
+                resul = c*d;
+
+                System.out.println("El area del rectangulo es:" + resul);
+                break;
+            default:
+
+                 System.out.println("La respuesta no es correcta intente de nuevo");
+
+            }
+                break;
+
+                case 4:
+                System.out.println("Inserte cuanto mide el radio del circulo");
+                c = entrada.nextFloat();
+
+                System.out.println("Inserte 1 para calcular el perimetro, 2 para calcular el area");
+                calculo = entrada.nextInt();
+                switch(calculo){
+                
+                case 1:
+                resul = 2*c*pi;
+
+                System.out.println("El perimetro del circulo es de:" + resul);
+                break;
+
+                case 2:
+                a1 = Math.pow(c,2);
+
+                System.out.println("La respuesta no es correcta intente de nuevo");
+                }
+
+            }
+            break;
 
                 case 7:
                     for(n = 1; n<= 10; n++){
