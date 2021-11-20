@@ -272,6 +272,40 @@ public class Ejercicios{
         
         
         */
+        boolean m=false;
+        int n;
+        char continuar;
+        do{
+            System.out.println("Introduce el tamaño del cuadrado, no negativos,no mayor que 100");
+            n = entrada.nextInt();
+            if( n<0 || n>100){
+               m = true;
+                System.out.println("El cuadrado no acepta ni negativos ni mayores a 100");
+            }else{
+
+                for(int i = 1; i<=n; i++){
+                    for (int j = 1; j<=n; j++){
+                        if(i % 2 != 0){
+                            System.out.print("/ ");
+                        }else{
+                            System.out.print("* ");
+                        }
+                    }
+                System.out.println(" ");
+                }
+            }
+            System.out.println("Deseas hacer otro cuadrado, presiona 's' para si");
+            continuar = entrada.next().charAt(0);
+            if (continuar == 's' || continuar == 'S'){
+
+            }else{
+                m = true;
+            }
+
+
+        }while(!m);
+
+
 
     }
 }
