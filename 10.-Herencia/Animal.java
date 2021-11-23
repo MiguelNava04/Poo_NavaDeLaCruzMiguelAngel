@@ -18,7 +18,7 @@ public class Animal{
 
     private String nombre, raza, tipo_alimento;
     private int edad;
-    //private boolean sexo;
+    //private boolean sexo = true;
 
 
     /*
