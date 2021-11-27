@@ -13,7 +13,7 @@ import javax.swing.*;
 import java.lang.Math;
 
 
-public class Proveedores(){
+public class Proveedores{
 
     private String nombre_cliente;
     private String producto[] = new String[10];

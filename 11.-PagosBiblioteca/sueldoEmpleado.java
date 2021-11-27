@@ -11,7 +11,7 @@ import javax.swing.*;
 import java.util.*;
 
 
-public class sueldoEmpleado(){
+public class sueldoEmpleado{
 
     private int ID_empleado, num_horas;
     private String nombre, appat, appatmat;

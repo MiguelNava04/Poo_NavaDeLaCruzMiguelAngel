@@ -63,7 +63,7 @@ public class Principal{
             //vamos a obtener el error, es visible para el usuario
             JOptionPane.showMessageDialog(null, " "+e.getMessage());
             //si solo queremos imprimir el error en consola
-            System.out.println("El erro es: " + e.getMessage());
+            System.out.println("El error es: " + e.getMessage());
 
         }
 
