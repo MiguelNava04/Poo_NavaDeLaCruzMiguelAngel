@@ -2,13 +2,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
+package com.mycompany._ventana;
 
 /**
  *
  * @author Edgar
  */
-
 import javax.swing.*;
+
 
 public class Ventana {
     
@@ -84,6 +85,28 @@ public class Ventana {
         JButton registrobutton = new JButton("Registrarse");
         registrobutton.setBounds(180, 80, 120, 25);
         panel.add(registrobutton);
+        
+        /*
+        Tarea deberan de integrar el metodo para que la ventana
+        al momento de mandar a llamar aparezca exactamente al centro de la pantalla
+        
+        Password debe de no ser visible  ***
+        
+        
+        Se debe de tener un usuario por defecto (ustedes lo definien)
+        ingreso usuario y pass y me digire a otra ventana que diga BIENVENIDO
+        sino USUARIO INEXISTENTE
+        
+        Deberan de programar la ventana para el registro con los siguientes campos
+        
+        Nombre
+        Apellido Paterno
+        Apellido Materno
+        Fecha de nacimiento //agregan un objeto calendario  //3 elementos de lista
+        Usuario
+        Contraseña
+        
+        */
     }
-  
+    
 }
