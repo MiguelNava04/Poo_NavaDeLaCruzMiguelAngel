@@ -7,19 +7,21 @@
  *
  * @author Edgar
  */
+
+
+
 public class Cliente {
     
     private String nombre;
     private int[] carroCompra;
     
     public Cliente(){
-        
+    
     }
 
-    public Cliente(privste String, nombre , int[] carroCompra) {
+    public Cliente(String nombre, int[] carroCompra) {
         super();
-        this.String = String;
-        this.<error> = <error>;
+        this.nombre = nombre;
         this.carroCompra = carroCompra;
     }
 
@@ -40,4 +42,6 @@ public class Cliente {
     }
     
     
-}
+    
+    
+} 
