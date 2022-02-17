@@ -27,7 +27,47 @@ function validar(formulario){
     }
     if(!allvalid){
         alert("Escribe solo letras en el campo Nombre");
+        formulario.edad.focus();
+        return (false);
+    }
+
+    if(formulario.edad.value.length > 2){
+        alert("Escriba solo 2 digitos en el campo de edad")
+        formulario.nombre.focus();
+        return false;
+    }
+
+    var checkOk = "0987654321";
+    var checkStr = formulario.edad.value;
+    var allvalid = true;
+
+    for(var i = 0; i < checkStr.length; i++ ){
+        var ch = checkStr.charAt(i);
+             
+          for(var j = 0; j < checkOk.length; j++){
+            if(ch == checkOk.charAt(j)) 
+          
+            break;
+        }
+            if(j == checkOk.length){
+                allvalid = false;
+                break;
+            }
+        
+    }
+    if(!allvalid){
+        alert("Escribe solo numeros en el campo Edad");
         formulario.nombre.focus();
         return (false);
     }
+    
+    //manejo de expresiones regulares
+
+    var txt = formulario.correo.value;
+
+    var b = /^[^@\s]+@[^@\.\s]+(\.[^@\.\s]+)$/;
+
+    alert("Email " +(b.test(txt)?"":" no ")+"valido");
+
+    return b.test(txt);
 } 
